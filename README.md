@@ -16,30 +16,41 @@ To use the HDFS commands, first you need to start the Hadoop services using the 
 ```
 ls
 mkdir
+Cp
+Mv
+rm
+
 ```
- - Check HBase status
+ -  LISTING ROOT DIRECTORY
  ```
- status
+ hadoop fs -ls /
+
  ```
- - Check HBase version
+ - LISTING DEFAULT TO HOME DIRECTORY
  ```
- version
+ hadoop fs -ls
  ```
- - Check HBase user
+  ```
+ hadoop fs -ls /user/hirwuser150430
  ```
- whoami
+ 
+ - CREATE A DIRECTORY IN HDFS 
  ```
-- Create a new table
+ hadoop fs -mkdir hadoop-test1
+ ```
+- COPY FROM LOCAL FS TO HDFS
 ```
-create 'table1', 'tablerow', 'tablecol'
+hadoop fs -copyFromLocal  /hirw-starterkit/hdfs/commands/dwp-payments-april10.csv hadoop-test1
 ```
-- Insert values into the table
+- COPY TO HDFS TO LOCAL FS
 ```
-put 'table1', 'tablerow', 'tablecol', 10
-put 'table1', 'tablerow', 'tablecol', 15
+hadoop fs -copyToLocal hadoop-test1/dwp-payments-april10.csv .
 ```
-- Drop table
 ```
-disable 'table1'
-drop 'table1'
+hadoop fs -ls hadoop-test1
+```
+
+- COPY A FILE FROM ONE FOLDER TO ANOTHER
+```
+hadoop fs -cp hadoop-test1/dwp-payments-april10.csv hadoop-test2
 ```
