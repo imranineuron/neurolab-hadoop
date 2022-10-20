@@ -1,5 +1,5 @@
 ![image](https://user-images.githubusercontent.com/115451707/196919992-edcfea8b-e3f6-4f35-9398-43be66b5622d.png)
-# Big Data Hadoop sample code
+# Open Terminal and execute the codes below
 
 HDFS is the primary or major component of the Hadoop ecosystem which is responsible for storing large data sets of structured or unstructured data across various nodes and thereby maintaining the metadata in the form of log files. 
 To use the HDFS commands, first you need to start the Hadoop services using the following command:
