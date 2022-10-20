@@ -10,3 +10,36 @@ To use the HDFS commands, first you need to start the Hadoop services using the 
 
 #### jps
 
+
+### General Shell Commands
+ - LOCAL FILE SYSTEM
+```
+ls
+mkdir
+```
+ - Check HBase status
+ ```
+ status
+ ```
+ - Check HBase version
+ ```
+ version
+ ```
+ - Check HBase user
+ ```
+ whoami
+ ```
+- Create a new table
+```
+create 'table1', 'tablerow', 'tablecol'
+```
+- Insert values into the table
+```
+put 'table1', 'tablerow', 'tablecol', 10
+put 'table1', 'tablerow', 'tablecol', 15
+```
+- Drop table
+```
+disable 'table1'
+drop 'table1'
+```
